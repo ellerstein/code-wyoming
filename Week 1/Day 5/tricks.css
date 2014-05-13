@@ -1,0 +1,78 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    background-color: black;
+    color: white;
+}
+nav {
+    font-size: 14px;
+    float: right;
+    padding-top: 20px;
+}
+h1 {
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-transform: uppercase
+}
+h1 span {
+    color: #777;
+}
+h2 {
+    font-size: 55px;
+    font-family: serif;
+    font-style: italic;
+    padding: 20px;
+}
+h2 span {
+    color: red;
+}
+body {
+    background-color: #666;
+}
+p {
+    font-size: 14px;
+    font-family: monospace;
+    padding: 20px;
+}
+h3 {
+    padding: 0px;
+    font-family: serif;
+    font-size: 16px;
+    background-color: #ccc;
+    text-indent: 20px;
+}
+.main-box {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px 1px #111, inset 0px 1px 1px 1px #111;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.shape-explain {
+    color: white;
+    background-color: black;
+    margin: 20px;
+}
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 30px;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 20px;
+}
