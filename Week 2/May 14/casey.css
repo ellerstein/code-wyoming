@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, serif;
+}
+a {
+    color: orange;
+    text-decoration: none;
+}
+#header-color {
+    background-color: black;
+}
+header {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+header nav {
+    float: right;
+    padding-top: 10px;
+}
+header ul li {
+    display: inline-block;
+    padding: 25px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+header a {
+    color: white;
+}
+header a:hover {
+    color: orange;
+}
+h1 {
+    font-size: 40px;
+    padding-top: 5px;
+}
+h2 {
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+#main-color {
+    background-color: white;
+}
+main {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+    color: #444;
+}
+#big-image {
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#triple-image div {
+    float: left;
+    width: 300px;
+}
+#image-b {
+    margin: 0 30px;
+}
+#triple-image div img {
+    border: 1px solid lightgrey;
+    padding: 2px;
+    width: 100%;
+}
+#triple-image h2 {
+    font-style: italic;
+    font-size: 14px;
+    padding: 15px 0;
+}
+#triple-image p {
+    font-size: 12px;
+    line-height: 1.8;
+}
+.read-more {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+#bottom-image img {
+    float: right;
+    padding: 3px;
+    border: 1px solid lightgrey;
+    margin-left: 40px;
+}
+#bottom-image h2 {
+    font-style: italic;
+    font-size: 30px;
+    padding-bottom: 15px
+}
+#bottom-image p {
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 5px 0;
+}
+#bottom-nav {
+    background-color: #444;
+    margin-top: 40px;
+    overflow: auto
+}
+#big-nav {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+#big-nav div {
+    display: inline-block;
+    width: 24%;
+}
+#big-nav li {
+    list-style: none;
+    border-bottom: 1px solid #888;
+    padding: 5px;
+    font-size: 12px;
+}
+#big-nav h3 {
+    font-size: 12px;
+    padding: 15px 5px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+#big-nav div {
+    float: left;
+    padding-bottom: 20px;
+    margin-right: 12px;
+}
+#big-nav div:last-child {
+    margin-right: 0;
+}
+#big-nav div:first-child {
+    padding-left: 0;
+}
+footer {
+    background-color: black;
+}
+#footer-box {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding: 10px 0;
+    font-size: 12px;
+}
+footer p span {
+    float: right;
+}

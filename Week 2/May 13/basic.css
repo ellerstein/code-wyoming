@@ -40,15 +40,21 @@ header h2 {
     margin: 0;
     padding: 0;
     align-items: stretch;
+    
 }
 #topnav li {
     background-color: #ccc;
     display: inline-block;
+    float: right;
     list-style-type: none;
     text-align: center;
-    padding: 5px 46px;
+    padding: 5px 48px;
     box-shadow: inset 2px 2px 2px white;
     margin: 0;
+}
+#topnav ul{
+    overflow: auto;
+    margin-bottom: 10px;
 }
 main {
     overflow: auto;
