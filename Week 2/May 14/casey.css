@@ -7,6 +7,8 @@
 }
 body {
     font-family: Georgia, serif;
+    padding-top: 125px;
+
 }
 a {
     color: orange;
@@ -14,6 +16,9 @@ a {
 }
 #header-color {
     background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 header {
     width: 960px;

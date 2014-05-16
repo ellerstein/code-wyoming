@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: #eee;
+    }
+    main{
+        width: 200px;
+        height: 600px;
+        margin: 40px auto;
+        background: white;
+    }
+    div{
+        position: relative;
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        padding-top: 100px;
+        text-align: center;
+    }
+    div:first-child{
+        background-color: red;
+        z-index: 5;
+    }
+    div:nth-child(2){
+        background-color: blue;
+        right: 50px;
+        bottom: 50px;
+    }
+    div:last-child{
+        background-color: green;
+        bottom: 100px;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div>Top</div>
+        <div>Middle</div>
+        <div>Bottom</div>
+    </main>
+    
+</body>
+</html>
