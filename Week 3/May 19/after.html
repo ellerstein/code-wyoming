@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>After</title>
+    <style>
+        .floater {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            margin: 50px;
+            background-image: linear-gradient(45deg, red, blue);
+            float: left;
+        }
+        .daddy::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        footer {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            margin: 50px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="daddy">
+        <div class="floater"></div>
+        <div class="floater"></div>
+    </div>
+    <footer></footer>
+
+</body>
+
+</html>

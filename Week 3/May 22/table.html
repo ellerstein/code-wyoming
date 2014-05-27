@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+    table{
+        padding: 2em;
+        border-spacing: 0;
+        border-collapse: collapse;
+        border: .3em solid green;
+        transition: all 2s;
+        
+        
+    }
+    table:hover{
+        -webkit-transform:rotate(360deg) scale(2,2) translate(200px, 200px);
+
+    }
+    caption{
+        font-size: 2em;
+    }
+    th,td{
+        border: .1em solid black;
+        border-left: none;
+        border-right: none;
+        padding: .2em .4em;
+    }
+    th{
+        background-color: #555;
+        color: white;
+    }
+    tr:nth-child(even){
+        background-color: #ddd;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Class Info</caption>
+        <tr>
+            <th>Name</th>
+            <th>Hometown</th>
+            <th>Favorite Color</th>
+            <th>Alternate Color</th>
+        </tr>
+        <tr>
+            <td>Matt</td>
+            <td>Cheyenne</td>
+            <td colspan="2">Green</td>
+            
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>Chicago</td>
+            <td>Blue</td>
+            <td>Black</td>
+        </tr>
+        <tr>
+            <td>Corbett</td>
+            <td>Tyler</td>
+            <td>Orange</td>
+            <td>Blue</td>
+        </tr>
+        <tr>
+            <td>Bre</td>
+            <td>Riverton</td>
+            <td>Green</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Susan</td>
+            <td>Seattle</td>
+            <td colspan="2">White</td>
+            
+        </tr>
+        <tr>
+            <td>Dave</td>
+            <td>Buffalo</td>
+            <td>Fucia</td>
+            <td>Aqua-Marine</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

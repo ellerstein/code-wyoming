@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Linear Gradient</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .rainbow {
+            height: 500px;
+            width: 100%;
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        }
+        .stop {
+            height: 500px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: linear-gradient(to top, red 50%, blue, black);
+        }
+        .column {
+            height: 500px;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: linear-gradient(to left, black 20%, orange 20%, orange 40%, black 40%, black 60%, orange 60%, orange 80%, black 80%, black 100%);
+        }
+        .tara {
+            height: 700px;
+            width: 100%;
+            background-image: linear-gradient(to bottom, green, #1ef);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rainbow">
+
+    </div>
+    <div class="stop"></div>
+    <div class="column"></div>
+    <div class="tara"></div>
+
+</body>
+
+</html>
