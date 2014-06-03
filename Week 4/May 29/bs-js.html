@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style>
+    #tab-area{
+        height: 300px;
+        width: 400px;
+        border: 2px solid black;
+        margin: 10px;
+    }
+    .nav-tabs li{
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        
+    }
+    </style>
+</head>
+
+<body>
+    /-- ========================================== Dropdowns ========================================= --/
+    <div class="dropdown">
+        <a href="#" class="btn btn-success" data-toggle="dropdown">Trips</a>
+        <ul class="dropdown-menu">
+            <li><a href="">Full Day</a>
+            </li>
+            <li><a href="">Half Day</a>
+            </li>
+            <li><a href="">Scenic</a>
+            </li>
+            <li><a href="">Combo</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--
+    ============================================
+    Tabs
+    ============================================
+    -->
+   <div id="tab-area">
+         <ul class="nav nav-tabs">
+            <li class="active"><a href="#Full" data-toggle="tab">Full Day</a>
+            </li>
+            <li><a href="#Half" data-toggle="tab">Half Day</a>
+            </li>
+            <li><a href="#Scenic" data-toggle="tab">Scenic Floats</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="Full" class="tab-pane active">Enjoy a full day of majestic Wyoming fishing with lunch,etc</div>
+            <div id="Half" class="tab-pane">For those with less taime and money</div>
+            <div id="Scenic" class="tab-pane">For lazy fucks who don't fish</div>
+        </div>
+    </div>
+    <!--
+    ===============================================
+    Collapse
+    ==================================================
+    -->
+<button class="btn btn-primary" data-toggle="collapse" data-target="#Guides">Fishing Guides</button>
+<div id="Guides" class="collapse">
+    <img src="//lorempixel.com/300/300" alt="">
+</div>
+
+
+    <script src="/bootstrap/jquery-2.1.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

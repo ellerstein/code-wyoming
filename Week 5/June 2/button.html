@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .fade-out {
+            height: 60vh;
+            width: 60vw;
+            transition: opacity 3s;
+            background-color: black;
+            color: white;
+            display: flex;
+        }
+        button {
+            margin: auto;
+        }
+        .faded {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="clicker()">Click Me For Alert</button>
+    <div id="target" class="fade-out">
+    </div>
+    <button>Click me to Fade Out</button>
+
+
+    <script>
+        var clicker = function () {
+            alert("You Clicked The Button, Moron")
+        };
+
+        var fadeDiv = document.getElementById("target");
+        var doFadeBaby = function () {
+            fadeDiv.classList.toggle("faded")
+        };
+        fadeDiv.addEventListener("click", doFadeBaby);
+
+        var button = document.getElementById;
+
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = "Text in my Div";
+        document.getElementById("parent").appendNode(newDiv);
+    </script>
+</body>
+
+</html>

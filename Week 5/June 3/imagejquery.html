@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style>
+        .circle img{
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="picDiv">
+        <img src="//lorempixel.com/600/600/nature" alt="">
+    </div>
+
+
+    <script src="/bootstrap/jquery-2.1.1.js"></script>
+    <script>
+        var picDiv = $('#picDiv');
+        var circlePic = function () {
+            picDiv.toggleClass('circle');
+        };
+        picDiv.click(circlePic);
+    </script>
+</body>
+
+</html>

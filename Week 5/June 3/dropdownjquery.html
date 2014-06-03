@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style>
+        ul {
+            padding: 0;
+        }
+        #topMenu {
+            width: 100%;
+        }
+        #topMenu li {
+            position: relative;
+            display: inline-block;
+            background-color: #555;
+            color: white;
+            padding: 2em;
+        }
+        #dropMenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            transition: 2s;
+        }
+        #dropMenu li {
+            background-color: lime;
+            color: brown;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            border: 2px solid red;
+            border-radius: 20%;
+        }
+        .slow {
+            -webkit-transform: rotate(360deg);
+        }
+        .noBShide {
+            visibility: hidden;
+        }
+        .counterSpin {
+            -webkit-transform: rotate(-360deg);
+            transition: 3s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="topMenu">
+        <li>Link 1</li>
+        <li><span id="link2">Link 2</span>
+            <ul id="dropMenu" class="noBShide">
+                <li>drop1</li>
+                <li>drop2</li>
+                <li>drop3</li>
+                <li>drop4</li>
+            </ul>
+        </li>
+        <li>Link 3</li>
+        <li>Link 4</li>
+    </ul>
+
+    <script src="/bootstrap/jquery-2.1.1.js"></script>
+    <script>
+        var dropMenu = $('#dropMenu');
+        var link2 = $('#link2');
+        var counterSpin = $('#dropMenu li')
+        var dropdown = function () {
+            dropMenu.toggleClass('noBShide slow');
+            counterSpin.toggleClass('counterSpin');
+        };
+        link2.click(dropdown);
+    </script>
+
+</body>
+
+</html>
