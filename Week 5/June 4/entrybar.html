@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entry Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #222;
+            color: white;
+        }
+        #inputBox {
+            width: 100%;
+            margin: 25% 30%;
+        }
+        input {
+            background-color: #555;
+            padding: 10px;
+            border-radius: 5px;
+            border: 0;
+            color: white;
+        }
+        button {
+            padding: 10px;
+            background-color: #5461FF;
+            color: white;
+            border-radius: 5px;
+            border: 0;
+        }
+        p {
+            margin: 10px 0;
+            color: #888;
+        }
+        #alertDiv {
+            height: 100px;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.5em;
+            margin-left: 20px;
+        }
+        .warning {
+            background-color: orange;
+        }
+        .success {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="inputBox">
+        <input type="text" placeholder="Email Address" id="email">
+        <input type="password" placeholder="Password" id="password">
+        <button>LOG IN</button>
+        <p>Forgotten Password?</p>
+    </div>
+    <div id="alertDiv"></div>
+
+    <script src="/bootstrap/jquery-2.1.1.js"></script>
+    <script>
+        var button = $('button');
+        var alertDiv = $('#alertDiv');
+        var alertBox = function () {
+            var emailValue = $('#email').val();
+            var passwordValue = $('#password').val();
+
+
+            if (emailValue === "info@jacksonholeanglers.com") {
+                alertDiv.text('Welcome Dave, You Rule!');
+            } else {
+                alertDiv.text('Invalid Email or Password');
+                alertDiv.addClass('warning');
+            }
+            if (passwordValue === "codewyoming") {
+                alertDiv.text('Welcome Dave, You Rule!');
+                alertDiv.addClass('success');
+            } else {
+                alertDiv.text('Invalid Email or Password');
+                alertDiv.addClass('warning');
+            }
+        }
+        button.click(alertBox);
+    </script>
+</body>
+
+</html>
