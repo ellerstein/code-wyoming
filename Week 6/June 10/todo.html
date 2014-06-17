@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ddd;
+            color: #999;
+        }
+        h1 {
+            font-size: 6em;
+            margin: 40px;
+            text-align: center;
+        }
+        main {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            border-top: 15px solid #666;
+        }
+        .top-line {
+            height: 3em;
+            display: block;
+            position: relative
+        }
+        input[type="text"] {
+            position: absolute;
+            font-size: 1.5em;
+            padding: 5px;
+            border: 1px solid black;
+            width: 90%;
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            background-color: #ddd;
+        }
+        label {
+            width: 10%;
+            height: 100%;
+            display: inline-block;
+            margin: 0;
+        }
+        .checkbox {
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            display: inline-block;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        input:checked + span.checkbox {
+            background-color: #555;
+        }
+        .x-out {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-image: url(http://bookriotcom.c.presscdn.com/wp-content/uploads/2013/07/x.png);
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin-top: 3px;
+            visibility: hidden;
+        }
+        li:hover .x-out {
+            visibility: visible;
+        }
+        .todo {
+            position: absolute;
+            background-color: #eee;
+            width: 90%;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0;
+            font-size: 1.5em;
+            padding: 8px;
+        }
+        footer {
+            margin: 20px;
+            line-height: 2em;
+            text-align: center;
+        }
+        li {
+            list-style-type: none;
+            height: 3em;
+            position: relative;
+        }
+        .strike span.todo {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>todos</h1>
+    </header>
+    <main>
+
+        <div class="top-line">
+            <label>
+                <input type="checkbox"><span class="checkbox"></span>
+            </label>
+            <input type="text" placeholder="What needs to be done?">
+
+        </div>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox"><span class="checkbox"></span>
+                </label>
+                <span class="todo">Lorem ipsum dolor sit amet, consectetur.</span>
+                <span class="x-out"></span>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox"><span class="checkbox"></span>
+                </label>
+                <span class="todo">Lorem ipsum dolor sit amet, consectetur.</span>
+                <span class="x-out"></span>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox"><span class="checkbox"></span>
+                </label>
+                <span class="todo">Lorem ipsum dolor sit amet, consectetur.</span>
+                <span class="x-out"></span>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox"><span class="checkbox"></span>
+                </label>
+                <span class="todo">Lorem ipsum dolor sit amet, consectetur.</span>
+                <span class="x-out"></span>
+            </li>
+
+        </ul>
+
+
+
+
+    </main>
+    <footer>
+        <p>Double-click to edit a todo</p>
+        <p>Created by David Ellerstein</p>
+        <p>Part of TodoMVC</p>
+    </footer>
+
+    <script src="/bootstrap/jquery-2.1.1.js"></script>
+    <script>
+        var deleteParent = function () {
+            $(this).parent().remove();
+        }
+        var x_out = $('.x-out');
+        x_out.click(deleteParent);
+
+
+        var toggleTodo = function () {
+            $(this).parent().parent().toggleClass('strike');
+        }
+        $('input[type=checkbox]').click(toggleTodo);
+
+
+        var newTodo = function (userInput) {
+            var newLi = $('<li><label><input type="checkbox"><span class="checkbox"></span></label><span class="todo">' + userInput + '</span><span class="x-out"></span></li>');
+            newLi.find('input').click(toggleTodo);
+            newLi.find('.x-out').click(deleteParent);
+            newLi.appendTo('ul');
+
+        }
+        var enterListener = function (event) {
+            if (event.which === 13) {
+                var userInput = $(this).val();
+                newTodo(userInput);
+                $(this).val('');
+            }
+        };
+        $('input').keypress(enterListener);
+    </script>
+
+
+</body>
+
+</html>

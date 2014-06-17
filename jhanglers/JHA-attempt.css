@@ -19,6 +19,29 @@ h1 {
     font-size: 4em;
     font-weight: bold;
 }
+.home h2 {
+    text-align: center;
+    font-size: 2em;
+}
+.home h3 {
+    text-align: center
+}
+.home main {
+    padding: 1em;
+}
+.home p {
+    font-size: 1.2em;
+}
+blockquote {
+    font-style: italic;
+    font-size: 1.5em;
+    color: green;
+}
+#how-it-works blockquote {
+    width: 200px;
+    border: 1px solid green;
+    margin-right: 10px;
+}
 header nav li {
     background-color: #ddd;
     border-left: 1px solid white;
@@ -30,6 +53,7 @@ header nav li {
 main .nav-tabs li {
     border: 1px solid #999;
     border-bottom: 0;
+    background-color: #ddd;
 }
 main .nav-tabs li.active a {
     background-color: #aaa;
