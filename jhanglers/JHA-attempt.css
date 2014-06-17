@@ -37,6 +37,9 @@ blockquote {
     font-size: 1.5em;
     color: green;
 }
+.home blockquote{
+    padding-right: 2em;
+}
 #how-it-works blockquote {
     width: 200px;
     border: 1px solid green;
@@ -46,6 +49,9 @@ header nav li {
     background-color: #ddd;
     border-left: 1px solid white;
     border-right: 1px solid white;
+}
+header nav li.activa{
+    background-color: #bbb;
 }
 .carousel-inner img {
     width: 100%;
